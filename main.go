@@ -18,5 +18,6 @@ func render(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", render)
+	http.HandleFunc("/shorten", shorten)
 	http.ListenAndServe(":8080", nil)
 }
