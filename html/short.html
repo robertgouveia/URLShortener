@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-black flex flex-col items-center mt-12 w-100">
+  <h1 class="w-fit text-white text-[48px] font-medium">URL Shortened!</h1>
+  <div class="w-1/2 p-3">
+    <div class="flex gap-3">
+      <input disabled required name="url" value="{{.url}}"
+        class="w-full border-b-2 border-teal-700 bg-transparent text-white focus:outline-none" type="text">
+      <button onclick="copyToClipboard()" class="bg-teal-700 p-3 rounded-md text-white">Copy</button>
+    </div>
+  </div>
+  <h1 class="text-red-500">{{.error}}</h1>
+</body>
+
+<script>
+  function copyToClipboard() {
+    const input = document.querySelector('input').value;
+    navigator.clipboard.writeText(input);
+  }
+</script>
+
+</html>
