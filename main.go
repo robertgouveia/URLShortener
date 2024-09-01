@@ -1,6 +1,7 @@
 package main
 
 import (
+	"URLShortner/methods"
 	"html/template"
 	"net/http"
 )
@@ -18,6 +19,6 @@ func render(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", render)
-	http.HandleFunc("/shorten", shorten)
+	http.HandleFunc("/shorten", methods.Shorten)
 	http.ListenAndServe(":8080", nil)
 }
