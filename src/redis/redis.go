@@ -9,12 +9,10 @@ import (
 var rdb *redis.Client
 var ctx = context.Background()
 
-func Initialize(addr, password string, db int) {
+func Initialize(addr string) {
 	// Initialize the redis client
 	rdb = redis.NewClient(&redis.Options{
-		Addr:     addr,
-		Password: password,
-		DB:       db,
+		Addr: addr,
 	})
 }
 

@@ -8,7 +8,7 @@ import (
 	"net/http"
 )
 
-var tmpl = template.Must(template.ParseFiles("index.html"))
+var tmpl = template.Must(template.ParseFiles("html/index.html"))
 
 //panic if template is not found
 
@@ -32,7 +32,7 @@ func render(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	redis.Initialize("localhost:6379", "", 0)
+	redis.Initialize("redis:6379")
 	defer redis.GetClient().Close()
 	http.HandleFunc("/", render)
 	http.HandleFunc("/shorten", methods.Shorten)

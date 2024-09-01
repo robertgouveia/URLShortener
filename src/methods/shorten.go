@@ -10,7 +10,7 @@ import (
 	"strings"
 )
 
-var tmpl = template.Must(template.ParseFiles("short.html"))
+var tmpl = template.Must(template.ParseFiles("html/short.html"))
 
 func Shorten(w http.ResponseWriter, r *http.Request) {
 	if r.Method != "POST" {
