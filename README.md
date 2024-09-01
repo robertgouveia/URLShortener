@@ -15,14 +15,6 @@ Clone the project and run docker compose up
   docker run urlshortener
 ```
 
-## Screenshots
-
-![Home Page](![image](https://github.com/user-attachments/assets/04706f24-9742-4e79-9721-29c30174c3ec)
-)
-![Success Page](![image](https://github.com/user-attachments/assets/6ec13122-7df0-4e22-bb0a-e9b269289055)
-)
-
-
 ## Tech Stack
 
 GO, Redis, Docker, Tailwind
